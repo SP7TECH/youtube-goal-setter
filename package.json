@@ -4,7 +4,8 @@
   "description": "Youtube Goal Setter App",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
   },
   "author": "Sumit Pandey",
   "license": "ISC",
