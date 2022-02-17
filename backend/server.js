@@ -3,9 +3,12 @@ const dotenv = require("dotenv").config();
 const {
     errorHandler
 } = require("./middleware/errorMiddleware");
+const connectDB = require("./config/db");
 
 const port = process.env.PORT || 5000;
 const goalRoutes = require("../backend/routes/goalsRoutes");
+
+connectDB();
 
 const app = express();
 
