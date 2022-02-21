@@ -7,6 +7,7 @@ const connectDB = require("./config/db");
 
 const port = process.env.PORT || 5000;
 const goalRoutes = require("../backend/routes/goalsRoutes");
+const userRoutes = require("../backend/routes/userRoutes");
 
 connectDB();
 
@@ -18,6 +19,7 @@ app.use(express.urlencoded({
 }));
 
 app.use(goalRoutes);
+app.use(userRoutes);
 app.use(errorHandler);
 
 app.listen(port, () => {
